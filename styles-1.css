@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(images/background-body.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:center;
+
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 2;
+}
+nav{
+  background-color: #00000080;
+  display: flex;
+  justify-content:space-between;
+}
+nav li{
+  list-style: none;
+  margin:auto;
+}
+nav ul{
+display: flex;
+font-family: sans-serif;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+nav img{
+  width: 5%;
+
+}
+.dropdown{
+  position: relative;
+  z-index: 2;
+}
+.dropdown ul{
+  background-color:#00000080;
+  min-width: 300px;
+  width:auto;
+  position: absolute;
+  right:20px;
+  top: 25px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.dropdown li{
+  display: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+  margin: 5% 0;
+  padding-bottom: 5%;
+}
+.dropdown li:last-of-type{
+  border-bottom: none;
+}
+.dropdown:hover .drop-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.about{
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  background-image: url(images/background1.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+}
+.info{
+  position: absolute;
+  bottom: 300px;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}
+.content{
+  text-align: center;
+  position: relative;
+  z-index:1;
+}
+.content a{
+  text-decoration: none;
+}
+.content h1{
+  color: white;
+  margin:10px auto;
+}
+.socials{
+  position: absolute;
+  right:100px;
+  top:-30px;
+}
+.content img{
+  border-radius: 100%;
+  background-color: white;
+  width:8%;
+  margin-right: 20px;
+}
+.content img:last-of-type{
+  margin-right: 0;
+}
+.container{
+  text-align: center;
+  color:white;
+  display: grid;
+  grid-template-columns:40% 60%;
+  width: 1000px;
+  background-color: #00000080;
+  margin-left: 250px;
+  margin-bottom: 20px;
+}
+.container h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.left{
+  text-align: left;
+  border-right: 1px solid white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.right{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.copyright{
+  text-align: center;
+}
+.about img{
+  width: 30%;
+  margin: 100px auto;
+}
+.about h1{
+  color: white;
+  margin-bottom: 50px;
+}
+.about p{
+  background-color: #50C87880;
+  margin-bottom: 50px;
+  padding:10px 50px;
+}
+.buttons{
+  display: flex;
+  justify-content:space-around;
+}
+.buttons a{
+  color: white;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-decoration: none;
+  border: 1px solid red;
+  border-radius: 5%;
+  background-color: #00000080;
+  padding:1% 10%;
+  margin-right: 10%;
+}
+.buttons a:last-of-type{
+  border: 1px solid green;
+}
+.buttons a:nth-child(2){
+  border: 1px solid #85DCB0;
+}
+.copyright{
+  color: white;
+  background-color: #232b2b;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.copyright a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  margin-right: 10px;
+}
+.copyright a:hover{
+  color: #ffffff70;
+}
+nav a:hover{
+  animation-name:color-change;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes color-change {
+  100%{
+  background-color: #85DCB0;
+      }
+}
+.buttons a:hover{
+  animation-name: button;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes button{
+  100%{
+    background-color: red;
+  }
+}
+.buttons a:last-of-type:hover{
+  animation-name: button2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes button2{
+  100%{
+    background-color: green;
+  }
+}
+.buttons a:nth-child(2):hover{
+  animation-name: button2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes button2{
+  100%{
+    background-color: #85DCB0;
+  }
+}
